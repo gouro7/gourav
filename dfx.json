@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "gourav_backend": {
+      "main": "src/gourav_backend/main.mo",
+      "type": "motoko"
+    },
+    "gourav_frontend": {
+      "dependencies": [
+        "gourav_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/gourav_frontend/src/index.html"
+      },
+      "source": [
+        "src/gourav_frontend/assets",
+        "dist/gourav_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
